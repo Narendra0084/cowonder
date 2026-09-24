@@ -1,0 +1,181 @@
+{
+  "entities": {
+    "Enquiry": {
+      "title": "Enquiry",
+      "description": "Travel enquiry submitted by a prospect with contact details, trip preferences, and quote tracking",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "referenceId": { "type": "string", "maxLength": 32 },
+        "name": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 25 },
+        "email": { "type": "string", "maxLength": 120 },
+        "destinationId": { "type": "string", "maxLength": 64 },
+        "destinationName": { "type": "string", "maxLength": 100 },
+        "packageId": { "type": "string", "maxLength": 64 },
+        "packageTitle": { "type": "string", "maxLength": 150 },
+        "travelDate": { "type": "string", "maxLength": 30 },
+        "adults": { "type": "number" },
+        "children": { "type": "number" },
+        "budget": { "type": "string", "maxLength": 50 },
+        "message": { "type": "string", "maxLength": 2000 },
+        "source": { "type": "string", "maxLength": 50 },
+        "utmSource": { "type": "string", "maxLength": 50 },
+        "utmMedium": { "type": "string", "maxLength": 50 },
+        "utmCampaign": { "type": "string", "maxLength": 100 },
+        "utmContent": { "type": "string", "maxLength": 100 },
+        "status": {
+          "type": "string",
+          "enum": ["new", "contacted", "quote_sent", "payment_pending", "confirmed", "completed", "cancelled"]
+        },
+        "quotedAmount": { "type": "number" },
+        "quoteNotes": { "type": "string", "maxLength": 2000 },
+        "quoteDate": { "type": "string", "maxLength": 40 },
+        "quoteValidUntil": { "type": "string", "maxLength": 40 },
+        "adminNotes": { "type": "string", "maxLength": 2000 },
+        "createdAt": { "type": "string", "maxLength": 40 },
+        "updatedAt": { "type": "string", "maxLength": 40 }
+      },
+      "required": ["referenceId", "name", "phone", "destinationName", "travelDate", "adults", "status"]
+    },
+    "Package": {
+      "title": "Package",
+      "description": "Curated holiday tour package with complete itinerary, inclusions, exclusions, and pricing",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "title": { "type": "string", "maxLength": 150 },
+        "slug": { "type": "string", "maxLength": 150 },
+        "destination": { "type": "string", "maxLength": 100 },
+        "duration": { "type": "string", "maxLength": 50 },
+        "startingPrice": { "type": "number" },
+        "description": { "type": "string", "maxLength": 1000 },
+        "overview": { "type": "string", "maxLength": 3000 },
+        "featured": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["published", "draft", "archived"] },
+        "createdAt": { "type": "string", "maxLength": 40 },
+        "updatedAt": { "type": "string", "maxLength": 40 }
+      },
+      "required": ["title", "slug", "destination", "duration", "startingPrice", "status"]
+    },
+    "Destination": {
+      "title": "Destination",
+      "description": "Travel destination showcase with photography and starting rates",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "name": { "type": "string", "maxLength": 100 },
+        "slug": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 800 },
+        "startingPrice": { "type": "number" },
+        "image": { "type": "string", "maxLength": 500 },
+        "region": { "type": "string", "maxLength": 50 },
+        "isPopular": { "type": "boolean" },
+        "createdAt": { "type": "string", "maxLength": 40 },
+        "updatedAt": { "type": "string", "maxLength": 40 }
+      },
+      "required": ["name", "slug", "description", "image"]
+    },
+    "Booking": {
+      "title": "Booking",
+      "description": "Confirmed traveler booking record with verified payment details and voucher references",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "bookingReference": { "type": "string", "maxLength": 32 },
+        "enquiryId": { "type": "string", "maxLength": 64 },
+        "packageId": { "type": "string", "maxLength": 64 },
+        "packageTitle": { "type": "string", "maxLength": 150 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "customerEmail": { "type": "string", "maxLength": 120 },
+        "customerPhone": { "type": "string", "maxLength": 25 },
+        "travelDate": { "type": "string", "maxLength": 40 },
+        "adults": { "type": "number" },
+        "children": { "type": "number" },
+        "amount": { "type": "number" },
+        "paymentId": { "type": "string", "maxLength": 100 },
+        "paymentGateway": { "type": "string", "maxLength": 50 },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "completed", "cancelled"] },
+        "createdAt": { "type": "string", "maxLength": 40 },
+        "updatedAt": { "type": "string", "maxLength": 40 }
+      },
+      "required": ["bookingReference", "packageTitle", "customerName", "customerPhone", "amount", "status"]
+    },
+    "Review": {
+      "title": "Review",
+      "description": "Verified customer review and testimonial",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "bookingId": { "type": "string", "maxLength": 64 },
+        "packageId": { "type": "string", "maxLength": 64 },
+        "packageTitle": { "type": "string", "maxLength": 150 },
+        "rating": { "type": "number" },
+        "review": { "type": "string", "maxLength": 2000 },
+        "photoUrl": { "type": "string", "maxLength": 500 },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "date": { "type": "string", "maxLength": 40 },
+        "createdAt": { "type": "string", "maxLength": 40 }
+      },
+      "required": ["customerName", "packageTitle", "rating", "review", "status"]
+    },
+    "AgencyConfig": {
+      "title": "AgencyConfig",
+      "description": "Global operational contact, WhatsApp, phone, and branding configurations",
+      "type": "object",
+      "properties": {
+        "agencyName": { "type": "string", "maxLength": 100 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "whatsapp": { "type": "string", "maxLength": 30 },
+        "email": { "type": "string", "maxLength": 120 },
+        "address": { "type": "string", "maxLength": 250 },
+        "operatingHours": { "type": "string", "maxLength": 100 },
+        "currencySymbol": { "type": "string", "maxLength": 10 },
+        "updatedAt": { "type": "string", "maxLength": 40 }
+      },
+      "required": ["agencyName", "phone", "whatsapp", "email"]
+    },
+    "Admin": {
+      "title": "Admin",
+      "description": "Admin authorization entry",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "maxLength": 120 },
+        "role": { "type": "string", "enum": ["superadmin", "agent"] },
+        "createdAt": { "type": "string", "maxLength": 40 }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "/enquiries/{enquiryId}": {
+      "schema": { "$ref": "#/entities/Enquiry" },
+      "description": "Travel enquiries submitted by prospective travelers"
+    },
+    "/packages/{packageId}": {
+      "schema": { "$ref": "#/entities/Package" },
+      "description": "Tour packages catalog"
+    },
+    "/destinations/{destinationId}": {
+      "schema": { "$ref": "#/entities/Destination" },
+      "description": "Destinations showcase"
+    },
+    "/bookings/{bookingId}": {
+      "schema": { "$ref": "#/entities/Booking" },
+      "description": "Verified traveler bookings"
+    },
+    "/reviews/{reviewId}": {
+      "schema": { "$ref": "#/entities/Review" },
+      "description": "Customer testimonials and ratings"
+    },
+    "/config/{configId}": {
+      "schema": { "$ref": "#/entities/AgencyConfig" },
+      "description": "Agency operational configuration"
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/Admin" },
+      "description": "Admin users authorization collection"
+    }
+  }
+}

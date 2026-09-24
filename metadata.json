@@ -1,0 +1,8 @@
+{
+  "name": "Wander Waves",
+  "description": "Premium travel agency offering bespoke holiday packages, transparent itineraries, and dedicated personal assistance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

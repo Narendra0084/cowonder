@@ -1,0 +1,87 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'narendra845581@gmail.com' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Packages: Public can read published packages, Admins can write
+    match /packages/{packageId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Destinations: Public can read, Admins can write
+    match /destinations/{destinationId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Reviews: Public can read approved reviews, Anyone can submit a review with status == 'pending', Admins can manage all
+    match /reviews/{reviewId} {
+      allow read: if resource.data.status == 'approved' || isAdmin();
+      allow create: if request.resource.data.status == 'pending' &&
+                       request.resource.data.customerName is string &&
+                       request.resource.data.customerName.size() <= 100 &&
+                       request.resource.data.rating is number &&
+                       request.resource.data.rating >= 1 &&
+                       request.resource.data.rating <= 5 &&
+                       request.resource.data.review is string &&
+                       request.resource.data.review.size() <= 2000;
+      allow update, delete: if isAdmin();
+    }
+
+    // Enquiries: Anyone can submit a new enquiry, Admins can read & update
+    // Clients can also get their specific enquiry if they have the ID (for /quote/:ref)
+    match /enquiries/{enquiryId} {
+      allow create: if request.resource.data.name is string &&
+                       request.resource.data.name.size() <= 100 &&
+                       request.resource.data.phone is string &&
+                       request.resource.data.phone.size() <= 25 &&
+                       request.resource.data.status == 'new';
+      allow get: if true; // to allow customer to view their quote page via unique reference/id
+      allow list: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    // Bookings: Anyone can create a confirmed booking after payment flow, Admins can manage all
+    match /bookings/{bookingId} {
+      allow create: if request.resource.data.bookingReference is string &&
+                       request.resource.data.customerName is string &&
+                       request.resource.data.amount is number;
+      allow get: if true; // customer can view their booking confirmation
+      allow list: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    // Config: Public read for contact details & branding, Admins can update
+    match /config/{configId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Admins list
+    match /admins/{adminId} {
+      allow read: if isAdmin();
+      allow write: if isAdmin();
+    }
+  }
+}
