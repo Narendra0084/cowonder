@@ -11,7 +11,7 @@ export const MobileStickyBar: React.FC = () => {
         
         {/* WhatsApp */}
         <a
-          href={getWhatsAppUrl('Hello Co Wonder, I would like to enquire about holiday packages.')}
+          href={getWhatsAppUrl('Hello An Wonder Co, I would like to enquire about holiday packages.')}
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-1 px-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 active:scale-95 transition"

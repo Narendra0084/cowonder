@@ -81,7 +81,7 @@ export const ContactUsPage: React.FC = () => {
             
             <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-xs space-y-5">
               <h3 className="font-display text-lg font-bold text-[#0A192F]">
-                Co Wonder Headquarters
+                An Wonder Co Headquarters
               </h3>
 
               <div className="space-y-4 text-xs text-slate-600">

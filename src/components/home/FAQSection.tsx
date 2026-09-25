@@ -103,7 +103,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ faqs }) => {
 
           <div className="flex items-center gap-3 shrink-0">
             <a
-              href={getWhatsAppUrl('Hello Co Wonder, I have a question regarding tour packages.')}
+              href={getWhatsAppUrl('Hello An Wonder Co, I have a question regarding tour packages.')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold text-emerald-800 bg-emerald-100 hover:bg-emerald-200 transition"

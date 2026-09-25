@@ -216,7 +216,7 @@ export const QuoteViewModal: React.FC<QuoteViewModalProps> = ({
                 {showPaymentStep ? 'Secure Payment Portal' : 'Official Quote & Booking Tracker'}
               </h3>
               <p className="text-xs text-slate-300">
-                Co Wonder verified client reservation portal
+                An Wonder Co verified client reservation portal
               </p>
             </div>
           </div>
@@ -321,7 +321,7 @@ export const QuoteViewModal: React.FC<QuoteViewModalProps> = ({
 
               <div className="flex gap-3">
                 <a
-                  href={getWhatsAppUrl(`Hello Co Wonder, I am checking my confirmed booking reference ${existingBooking.bookingReference}.`)}
+                  href={getWhatsAppUrl(`Hello An Wonder Co, I am checking my confirmed booking reference ${existingBooking.bookingReference}.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-2.5 rounded-lg text-xs font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition text-center flex items-center justify-center gap-1.5"
@@ -477,7 +477,7 @@ export const QuoteViewModal: React.FC<QuoteViewModalProps> = ({
                 <span className="text-slate-600">Want to adjust hotel category or dates before confirming?</span>
                 <div className="flex gap-2">
                   <a
-                    href={getWhatsAppUrl(`Hello Co Wonder, I am reviewing my quote ${enquiry.referenceId} for ${enquiry.destinationName}.`)}
+                    href={getWhatsAppUrl(`Hello An Wonder Co, I am reviewing my quote ${enquiry.referenceId} for ${enquiry.destinationName}.`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-3 py-1.5 rounded-md font-semibold text-emerald-800 bg-emerald-100 hover:bg-emerald-200 transition"
@@ -588,7 +588,7 @@ export const QuoteViewModal: React.FC<QuoteViewModalProps> = ({
                 <div className="flex items-start gap-2.5 p-3 rounded-lg bg-emerald-50/70 border border-emerald-200 text-xs text-emerald-950">
                   <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                   <p>
-                    Payments are encrypted and processed securely. An official booking reference is instantly recorded with Co Wonder.
+                    Payments are encrypted and processed securely. An official booking reference is instantly recorded with An Wonder Co.
                   </p>
                 </div>
 

@@ -37,7 +37,7 @@ export const SubmitReviewModal: React.FC = () => {
     try {
       await submitReview({
         customerName: customerName.trim(),
-        packageTitle: packageTitle.trim() || 'Custom Co Wonder Tour',
+        packageTitle: packageTitle.trim() || 'Custom An Wonder Co Tour',
         rating,
         review: reviewText.trim(),
         date: new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),

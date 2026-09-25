@@ -236,7 +236,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ destinations, onExplor
           {/* Brand Tagline Badge */}
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-xs font-semibold text-amber-400 shadow-md">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-            <span>Co Wonder • Independent & Tailored Holidays</span>
+            <span>An Wonder Co • Independent & Tailored Holidays</span>
           </div>
 
           {/* Slide Numeric Indicator & Pause Toggle */}

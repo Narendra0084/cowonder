@@ -28,11 +28,11 @@ async function startServer() {
   }
 
   app.listen(port, '0.0.0.0', () => {
-    console.log(`[Wander Waves] Travel server listening on http://0.0.0.0:${port}`);
+    console.log(`[An Wonder Co] Travel server listening on http://0.0.0.0:${port}`);
   });
 }
 
 startServer().catch((err) => {
-  console.error('[Wander Waves] Failed to start server:', err);
+  console.error('[An Wonder Co] Failed to start server:', err);
   process.exit(1);
 });

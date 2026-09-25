@@ -55,7 +55,7 @@ export const TrustSection: React.FC = () => {
             Transparent Travel Planning
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#0A192F] mt-1">
-            How Co Wonder Works
+            How An Wonder Co Works
           </h2>
           <p className="text-sm text-slate-600 mt-2">
             No confusion, no hidden charges. A clear, human-guided journey from initial idea to your trip home.

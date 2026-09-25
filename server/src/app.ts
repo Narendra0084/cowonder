@@ -15,7 +15,7 @@ export const createApp = (): Express => {
     res.json({
       status: 'healthy',
       timestamp: new Date().toISOString(),
-      service: 'Co Wonder Travel Agency API',
+      service: 'An Wonder Co Travel Agency API',
     });
   });
 

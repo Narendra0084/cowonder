@@ -62,7 +62,7 @@ export const verifyPayment = async (req: Request, res: Response): Promise<void> 
       },
       package: {
         id: pkgDetails?.id || 'custom-tour',
-        title: pkgDetails?.title || 'Co Wonder Custom Itinerary',
+        title: pkgDetails?.title || 'An Wonder Co Custom Itinerary',
         destination: pkgDetails?.destination || 'India',
       },
       travelDate: travelDate || new Date().toISOString().split('T')[0],
@@ -87,7 +87,7 @@ export const verifyPayment = async (req: Request, res: Response): Promise<void> 
 
     res.json({
       success: true,
-      message: 'Booking successfully confirmed and registered with Co Wonder.',
+      message: 'Booking successfully confirmed and registered with An Wonder Co.',
       booking: newBooking,
     });
   } catch (error) {

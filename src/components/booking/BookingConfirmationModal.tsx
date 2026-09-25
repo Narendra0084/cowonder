@@ -42,7 +42,7 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
     window.print();
   };
 
-  const whatsAppText = `Hello Co Wonder, my booking is confirmed under Reference ${booking.bookingReference} for ${booking.packageTitle}. Looking forward to the trip!`;
+  const whatsAppText = `Hello An Wonder Co, my booking is confirmed under Reference ${booking.bookingReference} for ${booking.packageTitle}. Looking forward to the trip!`;
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4">
@@ -56,7 +56,7 @@ export const BookingConfirmationModal: React.FC<BookingConfirmationModalProps> =
             </div>
             <div>
               <h3 className="font-display text-base font-bold text-white tracking-wide">
-                Co Wonder Official Voucher
+                An Wonder Co Official Voucher
               </h3>
 
               <p className="text-[11px] text-slate-300">

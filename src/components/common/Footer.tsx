@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteLookup })
               </div>
               <div>
                 <span className="font-brand text-2xl font-bold tracking-wider text-white block leading-tight">
-                  WANDER WAVES
+                  AN WONDER CO
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-slate-400 font-semibold block">
                   Travel & Expeditions
@@ -250,7 +250,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteLookup })
 
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} Co Wonder Travel & Expeditions. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} An Wonder Co Travel & Expeditions. All rights reserved.</p>
           <div className="flex items-center space-x-6">
             <span className="text-slate-500">Government Registered Travel Agency</span>
             <button

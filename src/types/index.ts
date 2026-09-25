@@ -33,6 +33,7 @@ export interface TourPackage {
   slug: string;
   destination: string;
   destinationId?: string;
+  tourType?: 'Group Tour' | 'Personal Tour' | 'Honeymoon / Couple' | 'Custom Trip' | string;
   duration: string; // e.g. "5 Nights / 6 Days"
   startingPrice: number;
   originalPrice?: number; // for strikethrough display with discount

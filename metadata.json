@@ -1,6 +1,6 @@
 {
-  "name": "Wander Waves",
-  "description": "Premium travel agency offering bespoke holiday packages, transparent itineraries, and dedicated personal assistance.",
+  "name": "An Wonder Co",
+  "description": "An Wonder Co offers carefully planned travel experiences with transparent packages, personal assistance and dedicated support throughout your journey.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

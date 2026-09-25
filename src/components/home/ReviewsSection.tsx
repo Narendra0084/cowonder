@@ -26,7 +26,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({ reviews, onOpenS
               Customer Experiences
             </h2>
             <p className="text-sm text-slate-600 mt-2 max-w-xl">
-              Authentic reviews submitted by travelers who have completed their holidays with Co Wonder. All reviews are verified prior to publication.
+              Authentic reviews submitted by travelers who have completed their holidays with An Wonder Co. All reviews are verified prior to publication.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export const ReviewsSection: React.FC<ReviewsSectionProps> = ({ reviews, onOpenS
         {/* Reviews Grid */}
         {approvedReviews.length === 0 ? (
           <div className="bg-white rounded-xl p-8 text-center border border-slate-200 text-slate-500 text-sm">
-            No customer reviews currently published. If you have recently traveled with Co Wonder, please submit your feedback!
+            No customer reviews currently published. If you have recently traveled with An Wonder Co, please submit your feedback!
           </div>
 
         ) : (

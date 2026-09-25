@@ -38,7 +38,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ packageDat
     if (navigator.share) {
       navigator.share({
         title: packageData.title,
-        text: `Check out ${packageData.title} by Co Wonder`,
+        text: `Check out ${packageData.title} by An Wonder Co`,
         url: window.location.href,
       }).catch(() => {});
     } else {
@@ -47,7 +47,7 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ packageDat
     }
   };
 
-  const whatsAppText = `Hello Co Wonder, I am interested in the "${packageData.title}" package (${packageData.duration}). Please share detailed availability and quotation.`;
+  const whatsAppText = `Hello An Wonder Co, I am interested in the "${packageData.title}" package (${packageData.duration}). Please share detailed availability and quotation.`;
 
 
   return (

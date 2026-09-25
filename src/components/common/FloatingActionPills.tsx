@@ -10,7 +10,7 @@ export const FloatingActionPills: React.FC = () => {
       
       {/* Green WhatsApp 'ASK ME' Pill */}
       <a
-        href={getWhatsAppUrl("Hello Co Wonder, I want to ask a question about trip packages and offers.")}
+        href={getWhatsAppUrl("Hello An Wonder Co, I want to ask a question about trip packages and offers.")}
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs pl-3 pr-3.5 py-2.5 rounded-l-full shadow-xl hover:shadow-2xl transition-all duration-200 translate-x-1 hover:translate-x-0"

@@ -268,10 +268,10 @@ export const PlanTripPopup: React.FC = () => {
                   </div>
                   <div className="text-left">
                     <span className="font-brand text-lg font-bold tracking-wider text-[#0A192F] block leading-none">
-                      WANDER WAVES
+                      AN WONDER CO
                     </span>
                     <span className="text-[9px] uppercase tracking-widest text-slate-500 font-semibold block">
-                      NEVER STOP EXPLORING
+                      TRAVEL & EXPEDITIONS
                     </span>
                   </div>
                 </div>

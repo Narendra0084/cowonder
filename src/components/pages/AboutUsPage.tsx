@@ -23,13 +23,13 @@ export const AboutUsPage: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-xs uppercase tracking-widest font-bold text-amber-600">
-            About Co Wonder
+            About An Wonder Co
           </span>
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A192F] mt-2">
             Crafting Reliable, Transparent Travel Experiences
           </h1>
           <p className="text-sm sm:text-base text-slate-600 mt-4 leading-relaxed">
-            Co Wonder was established with a singular objective: to eliminate the uncertainty, inflated middleman pricing, and ambiguous promises that all too often characterize holiday bookings.
+            An Wonder Co was established with a singular objective: to eliminate the uncertainty, inflated middleman pricing, and ambiguous promises that all too often characterize holiday bookings.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export const AboutUsPage: React.FC = () => {
             Travel should be an invigorating, seamless adventure — not an endless series of negotiations with aggressive drivers, disappointing hotel rooms, or surprise charges at checkout.
           </p>
           <p>
-            At Co Wonder, every itinerary is planned from the ground up by travel specialists who have personally stayed at our partner hotels and vetted our chauffeur teams. Whether you are traveling for a peaceful honeymoon in Gulmarg, an adventurous desert safari in Jaisalmer, or an international escape to Bali, we provide honest, transparent counsel.
+            At An Wonder Co, every itinerary is planned from the ground up by travel specialists who have personally stayed at our partner hotels and vetted our chauffeur teams. Whether you are traveling for a peaceful honeymoon in Gulmarg, an adventurous desert safari in Jaisalmer, or an international escape to Bali, we provide honest, transparent counsel.
           </p>
 
 
@@ -87,7 +87,7 @@ export const AboutUsPage: React.FC = () => {
                 Official Agency Credentials
               </span>
               <h3 className="font-display text-2xl font-bold text-white mt-1">
-                Co Wonder Travel Desk
+                An Wonder Co Travel Desk
               </h3>
               <p className="text-xs text-slate-300 mt-1">
                 Registered Tour Operator • GST Compliant • Verified Travel Network

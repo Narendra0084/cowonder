@@ -35,7 +35,7 @@ export const ReviewsPage: React.FC<ReviewsPageProps> = ({ reviews, onOpenSubmitR
               What Our Travelers Say
             </h1>
             <p className="text-sm text-slate-600 mt-2 max-w-xl">
-              Authentic reviews from families, couples, and adventurers who planned and completed their trips with Co Wonder.
+              Authentic reviews from families, couples, and adventurers who planned and completed their trips with An Wonder Co.
             </p>
           </div>
 

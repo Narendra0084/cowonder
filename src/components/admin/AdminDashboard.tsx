@@ -215,7 +215,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onBackToSite, on
 
           <div>
             <h2 className="font-display text-2xl font-bold text-[#0A192F]">
-              Co Wonder Operations
+              An Wonder Co Operations
             </h2>
             <p className="text-xs text-slate-500 mt-1">
               Authorized Agency Management Console
@@ -294,7 +294,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onBackToSite, on
             </div>
             <div>
               <span className="font-brand text-lg font-bold tracking-wider text-white">
-                WANDER WAVES
+                AN WONDER CO
               </span>
               <span className="text-[10px] uppercase tracking-wider text-amber-300 font-semibold block">
                 Travel Operations Console
@@ -449,7 +449,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onBackToSite, on
                           <td className="p-3.5 text-right space-x-1">
                             {/* WhatsApp Direct Link */}
                             <a
-                              href={getWhatsAppUrl(`Hello ${enq.name}, I am reaching out from Co Wonder regarding your enquiry ${enq.referenceId} for ${enq.destinationName}.`)}
+                              href={getWhatsAppUrl(`Hello ${enq.name}, I am reaching out from An Wonder Co regarding your enquiry ${enq.referenceId} for ${enq.destinationName}.`)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="p-1.5 text-emerald-700 hover:bg-emerald-50 rounded inline-block"
